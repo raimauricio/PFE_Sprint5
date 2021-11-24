@@ -1,0 +1,19 @@
+<form>
+    
+    <label for="email">
+        <input class="dados" type="text" [(ngModel)]="email" name="email" placeholder="E-mail">
+    </label>
+    
+    <label for="senha">
+        <input class="dados" type="{{typePass}}" [(ngModel)]="senha" name="senha" placeholder="Senha">
+    </label>
+    
+    <div class="icon"><mat-icon matSuffix (click)="verSenha()">{{pass}}</mat-icon></div>
+        
+    <div class="termos" *ngIf="termos"> 
+        <input type="checkbox" name="name" [(ngModel)]="aceite">    
+        <p>Eu concordo com os <a href="">Termos e Condições de Uso do PapoCast</a></p> 
+    </div>
+
+    <button (click)="executar()">{{formButton}}</button>
+</form>
